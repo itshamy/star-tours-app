@@ -11,12 +11,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
+        test: /\.(jsx|js)?$/,
+        include: [path.resolve(__dirname, 'src')],
+        exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
         loader: 'babel-loader',
         options: {
-          presets: ["@babel/preset-env", "@babel/preset-react"]
-        }
+           presets: ["@babel/preset-env", "@babel/preset-react"]
+         }
       },
       {
         test: /\.scss$/,

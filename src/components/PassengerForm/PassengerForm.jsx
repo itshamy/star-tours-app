@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './PassengerForm.scss';
 
-const PassengerForm = () => (
-  <div>HEY</div>
-)
-
+const PassengerForm = () => (<p>Now Export On other Line</p>);
 export default PassengerForm;
